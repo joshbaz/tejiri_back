@@ -1,3 +1,4 @@
+/*
 const passport = require('passport');
 
 module.exports = app => {
@@ -16,3 +17,5 @@ module.exports = app => {
         res.send(req.user);
     })
 }
+
+*/

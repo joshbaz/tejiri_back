@@ -11,11 +11,11 @@ const helmet = require('helmet');
 const cookieSession = require('cookie-session');
 
 //importation of the passport-library
-const passport = require('passport');
-require('./services/passport');
+//const passport = require('passport');
+//require('./services/passport');
 //importation of the routes
 const userRoutes = require('./api/routes/user');
-const googleRoute = require('./api/routes/googleRoute');
+//const googleRoute = require('./api/routes/googleRoute');
 const imageRoute = require('./api/routes/images');
 const folderRoute = require('./api/routes/folder');
 const assignmentRoute = require('./api/routes/assignment');
@@ -80,15 +80,15 @@ app.use(cookieSession({
 );
 
 //passport to use cookies for authentification
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 /************************************** */
 app.use('/folder', folderRoute);
 app.use('/assignment', assignmentRoute);
 app.use('/image', imageRoute);
 app.use('/users', userRoutes);
-googleRoute(app);
+//googleRoute(app);
 //request-response call absent 
 app.use((req, res, next) => {
     const error = new Error('not found');
