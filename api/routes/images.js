@@ -17,8 +17,7 @@ cloudinary.config({
 const storage = cloudinaryStorage({
     cloudinary: cloudinary,
     folder:'Images',
-    allowedFormats: ["jpg", "png", "svg"],
-    transformation: [{ width: 500, height: 500}]
+    allowedFormats: ["jpg", "png", "svg"]
 });
 
 const parser = multer({ storage: storage})
